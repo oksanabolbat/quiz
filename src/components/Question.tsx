@@ -14,7 +14,6 @@ export default function Question({
     skipAnswerHandler,
     activeIndex,
 }: Props) {
-    console.log("active index ", activeIndex);
     const [answer, setAnswer] = useState<{
         selectedAnswer: string;
         isCorrect: null | boolean;
@@ -28,7 +27,6 @@ export default function Question({
         timeout = 2000;
     }
     const handleSelectAnswer = (answer: string) => {
-        console.log(answer);
         setAnswer({ selectedAnswer: answer, isCorrect: null });
         setTimeout(() => {
             setAnswer({
@@ -48,10 +46,10 @@ export default function Question({
 
     return (
         <div>
-            <p className="mb-5 text-xl font-semibold">
+            <div className="mb-5 text-xl font-semibold">
                 {QUESTIONS[activeIndex].text}
-            </p>
-            <p>{QUESTIONS[activeIndex].id}</p>
+            </div>
+
             <QuestionTimer
                 timeout={timeout}
                 onTimeout={

@@ -31,7 +31,7 @@ export default function Answers({
                     if (answerState === "true") {
                         cssClass = "!bg-green-400";
                     } else if (answerState === "false") {
-                        cssClass = "!bg-red-500";
+                        cssClass = "!bg-orange-300";
                     }
                 }
                 return (
